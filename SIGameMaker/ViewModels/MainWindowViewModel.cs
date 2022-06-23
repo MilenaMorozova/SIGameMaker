@@ -5,7 +5,7 @@ namespace SIGameMaker.ViewModels;
 
 public class MainWindowViewModel: ViewModel
 {
-    public string ExampleText { get; set; } = "Example text for test";
+    public string ExampleText { get; set; } = "Example text for test"; // TODO delete it 
     public Round[] Rounds { get; set; } = new Round[]
     {
         new Round { Name = "Round 1", Themes =
