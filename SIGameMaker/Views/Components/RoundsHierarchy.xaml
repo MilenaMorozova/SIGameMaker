@@ -6,17 +6,20 @@
              xmlns:m="clr-namespace:SIGameMaker.Models"
              mc:Ignorable="d"
              d:DesignHeight="*" d:DesignWidth="*">
+    <UserControl.Resources>
+        <Style x:Key="HierarchyTextBlockStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="22" />
+            <Setter Property="Foreground" Value="{StaticResource TextWhiteBrush}" />
+        </Style>
+    </UserControl.Resources>
     <DockPanel Width="371">
         <TextBlock
+            Style="{StaticResource HierarchyTextBlockStyle}"
             Height="48"
             Background="{StaticResource HeaderGrayBrush}"
             Padding="20,11"
-            Foreground="{StaticResource TextWhiteBrush}"
-            FontFamily="Roboto"
-            FontSize="22"
-            DockPanel.Dock="Top">
-            Header
-        </TextBlock>
+            DockPanel.Dock="Top" 
+            Text="Header"/>
         <Border
             BorderBrush="{StaticResource BackgroundGrayBrush}"
             BorderThickness="1">
@@ -26,24 +29,21 @@
                 <TreeView.ItemTemplate>
                     <HierarchicalDataTemplate DataType="m:Round" ItemsSource="{Binding Themes}">
                         <TextBlock
-                            Text="{Binding Name}"
-                            FontFamily="Roboto"
-                            FontSize="22"
-                            Foreground="{StaticResource TextLightGrayBrush}" />
+                            Style="{StaticResource HierarchyTextBlockStyle}"
+                            Foreground="{StaticResource TextLightGrayBrush}"
+                            Text="{Binding Name}" />
                         <HierarchicalDataTemplate.ItemTemplate>
                             <HierarchicalDataTemplate DataType="m:Theme" ItemsSource="{Binding Questions}">
-                                <TextBlock
-                                    Text="{Binding Name}"
-                                    FontFamily="Roboto"
-                                    FontSize="22"
-                                    Foreground="{StaticResource TextWhiteBrush}" />
+                                <TextBlock 
+                                    Style="{StaticResource HierarchyTextBlockStyle}"
+                                    Text="{Binding Name}" 
+                                    />
                                 <HierarchicalDataTemplate.ItemTemplate>
                                     <HierarchicalDataTemplate DataType="m:Question">
-                                        <TextBlock
-                                            Text="{Binding Name}"
-                                            FontFamily="Roboto"
-                                            FontSize="22"
-                                            Foreground="{StaticResource TextWhiteBrush}" />
+                                        <TextBlock 
+                                            Style="{StaticResource HierarchyTextBlockStyle}"
+                                            Text="{Binding Name}" 
+                                            />
                                     </HierarchicalDataTemplate>
                                 </HierarchicalDataTemplate.ItemTemplate>
                             </HierarchicalDataTemplate>

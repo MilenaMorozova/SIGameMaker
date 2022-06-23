@@ -6,15 +6,15 @@
         xmlns:vm="clr-namespace:SIGameMaker.ViewModels"
         xmlns:c="clr-namespace:SIGameMaker.Views.Components"
         mc:Ignorable="d"
-        Title="MainWindow" 
-        Height="{x:Static SystemParameters.PrimaryScreenHeight}" 
-        Width="{x:Static SystemParameters.PrimaryScreenWidth}" 
+        Title="MainWindow"
+        Height="{x:Static SystemParameters.PrimaryScreenHeight}"
+        Width="{x:Static SystemParameters.PrimaryScreenWidth}"
         Background="{StaticResource BackgroundDarkGrayBrush}">
     <Window.DataContext>
-        <vm:MainWindowViewModel/>
+        <vm:MainWindowViewModel />
     </Window.DataContext>
     <DockPanel>
-        <c:RoundsHierarchy/>
-        <TextBlock Text="{Binding ExampleText}"/>
+        <c:RoundsHierarchy DockPanel.Dock="Left" Margin="32,83,0,42" />
+        <TextBlock Text="{Binding ExampleText}" />
     </DockPanel>
 </Window>
