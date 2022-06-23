@@ -15,59 +15,7 @@
         <vm:MainWindowViewModel/>
     </Window.DataContext>
     <DockPanel>
-        <DockPanel DockPanel.Dock="Left" Width="371" Margin="32,83,0,42">
-            <TextBlock 
-                    Height="48"
-                    Background="{StaticResource HeaderGrayBrush}"
-                    Padding="20,11"
-                    Foreground="{StaticResource TextWhiteBrush}"
-                    FontFamily="Roboto"
-                    FontSize="22"
-                    DockPanel.Dock="Top"
-                    >
-                    Header
-                </TextBlock>
-            <Border 
-                BorderBrush="{StaticResource BackgroundGrayBrush}" 
-                BorderThickness="1"
-                >
-                <TreeView 
-                    Background="{StaticResource BackgroundDarkGrayBrush}"
-                    ItemsSource="{Binding Path=Rounds}"
-                    >
-                    <TreeView.ItemTemplate>
-                        <HierarchicalDataTemplate DataType="m:Round" ItemsSource="{Binding Themes}">
-                            <TextBlock 
-                                Text="{Binding Name}" 
-                                FontFamily="Roboto"
-                                FontSize="22"
-                                Foreground="{StaticResource TextLightGrayBrush}"
-                                />
-                            <HierarchicalDataTemplate.ItemTemplate>
-                                <HierarchicalDataTemplate DataType="m:Theme" ItemsSource="{Binding Questions}">
-                                    <TextBlock 
-                                        Text="{Binding Name}" 
-                                        FontFamily="Roboto"
-                                        FontSize="22"
-                                        Foreground="{StaticResource TextWhiteBrush}"
-                                    />
-                                    <HierarchicalDataTemplate.ItemTemplate>
-                                        <HierarchicalDataTemplate DataType="m:Question">
-                                            <TextBlock 
-                                                Text="{Binding Name}" 
-                                                FontFamily="Roboto"
-                                                FontSize="22"
-                                                Foreground="{StaticResource TextWhiteBrush}"
-                                            />
-                                        </HierarchicalDataTemplate>
-                                    </HierarchicalDataTemplate.ItemTemplate>
-                                </HierarchicalDataTemplate>
-                            </HierarchicalDataTemplate.ItemTemplate>
-                        </HierarchicalDataTemplate>
-                    </TreeView.ItemTemplate>
-                </TreeView>
-            </Border>
-        </DockPanel>
+        
         <TextBlock Text="{Binding ExampleText}"/>
     </DockPanel>
 </Window>
