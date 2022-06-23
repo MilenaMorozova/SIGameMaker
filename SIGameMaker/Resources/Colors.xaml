@@ -3,10 +3,17 @@
     <Color x:Key="TextGrayColor">#777777</Color> 
     <Color x:Key="TextDarkGrayColor">#282828</Color> 
     <Color x:Key="TextLightGrayColor">#D9D9D9</Color> 
+    <SolidColorBrush x:Key="TextLightGrayBrush" Color="{StaticResource TextLightGrayColor}"/>
     <Color x:Key="TextWhiteColor">#F6F8FF</Color>
+    <SolidColorBrush x:Key="TextWhiteBrush" Color="{StaticResource TextWhiteColor}"/>
     
     <Color x:Key="BackgroundDarkGrayColor">#272D2D</Color>
+    <SolidColorBrush x:Key="BackgroundDarkGrayBrush" Color="{StaticResource BackgroundDarkGrayColor}"/>
     <Color x:Key="BackgroundGrayColor">#505050</Color> 
+    <SolidColorBrush x:Key="BackgroundGrayBrush" Color="{StaticResource BackgroundGrayColor}"/>
+    
+    <Color x:Key="HeaderGrayColor">#3C4343</Color> 
+    <SolidColorBrush x:Key="HeaderGrayBrush" Color="{StaticResource HeaderGrayColor}"/>
     
     <Color x:Key="ChipBlueColor">#238DCF</Color> 
     

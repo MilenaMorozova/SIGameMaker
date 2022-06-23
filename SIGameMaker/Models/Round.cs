@@ -1,9 +1,11 @@
 using System;
+using System.Collections.Generic;
+using System.Windows.Documents;
 
 namespace SIGameMaker.Models;
 
 public class Round
 {
     public string Name { get; set; } = "";
-    public Theme[] Themes { get; set; } = Array.Empty<Theme>();
+    public List<Theme> Themes { get; set; } = new List<Theme>();
 }
