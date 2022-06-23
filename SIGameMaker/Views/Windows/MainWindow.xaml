@@ -14,7 +14,11 @@
         <vm:MainWindowViewModel />
     </Window.DataContext>
     <DockPanel>
-        <c:RoundsHierarchy DockPanel.Dock="Left" Margin="32,83,0,42" />
+        <c:RoundsHierarchy 
+            DockPanel.Dock="Left" 
+            Margin="32,83,0,42" 
+            Rounds="{Binding Rounds}"
+        />
         <TextBlock Text="{Binding ExampleText}" />
     </DockPanel>
 </Window>

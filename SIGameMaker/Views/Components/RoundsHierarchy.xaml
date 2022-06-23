@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:m="clr-namespace:SIGameMaker.Models"
+             xmlns:local="clr-namespace:SIGameMaker.Views.Components"
              mc:Ignorable="d"
              d:DesignHeight="*" d:DesignWidth="*">
     <UserControl.Resources>
@@ -23,9 +24,11 @@
         <Border
             BorderBrush="{StaticResource BackgroundGrayBrush}"
             BorderThickness="1">
+            <!-- ItemsSource from out -->
             <TreeView
                 Background="{StaticResource BackgroundDarkGrayBrush}"
-                ItemsSource="{Binding Path=Rounds}">
+                ItemsSource="{Binding Rounds, RelativeSource={RelativeSource AncestorType=local:RoundsHierarchy}}"
+                >
                 <TreeView.ItemTemplate>
                     <HierarchicalDataTemplate DataType="m:Round" ItemsSource="{Binding Themes}">
                         <TextBlock
