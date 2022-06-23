@@ -3,62 +3,54 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:local="clr-namespace:SIGameMaker.Views.Components"
+             xmlns:m="clr-namespace:SIGameMaker.Models"
              mc:Ignorable="d"
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-        <DockPanel DockPanel.Dock="Left" Width="371" Margin="32,83,0,42">
-            <TextBlock 
-                    Height="48"
-                    Background="{StaticResource HeaderGrayBrush}"
-                    Padding="20,11"
-                    Foreground="{StaticResource TextWhiteBrush}"
-                    FontFamily="Roboto"
-                    FontSize="22"
-                    DockPanel.Dock="Top"
-                    >
-                    Header
-                </TextBlock>
-            <Border 
-                BorderBrush="{StaticResource BackgroundGrayBrush}" 
-                BorderThickness="1"
-                >
-                <TreeView 
-                    Background="{StaticResource BackgroundDarkGrayBrush}"
-                    ItemsSource="{Binding Path=Rounds}"
-                    >
-                    <TreeView.ItemTemplate>
-                        <HierarchicalDataTemplate DataType="m:Round" ItemsSource="{Binding Themes}">
-                            <TextBlock 
-                                Text="{Binding Name}" 
-                                FontFamily="Roboto"
-                                FontSize="22"
-                                Foreground="{StaticResource TextLightGrayBrush}"
-                                />
-                            <HierarchicalDataTemplate.ItemTemplate>
-                                <HierarchicalDataTemplate DataType="m:Theme" ItemsSource="{Binding Questions}">
-                                    <TextBlock 
-                                        Text="{Binding Name}" 
-                                        FontFamily="Roboto"
-                                        FontSize="22"
-                                        Foreground="{StaticResource TextWhiteBrush}"
-                                    />
-                                    <HierarchicalDataTemplate.ItemTemplate>
-                                        <HierarchicalDataTemplate DataType="m:Question">
-                                            <TextBlock 
-                                                Text="{Binding Name}" 
-                                                FontFamily="Roboto"
-                                                FontSize="22"
-                                                Foreground="{StaticResource TextWhiteBrush}"
-                                            />
-                                        </HierarchicalDataTemplate>
-                                    </HierarchicalDataTemplate.ItemTemplate>
-                                </HierarchicalDataTemplate>
-                            </HierarchicalDataTemplate.ItemTemplate>
-                        </HierarchicalDataTemplate>
-                    </TreeView.ItemTemplate>
-                </TreeView>
-            </Border>
-        </DockPanel>
-    </Grid>
+             d:DesignHeight="*" d:DesignWidth="*">
+    <DockPanel Width="371">
+        <TextBlock
+            Height="48"
+            Background="{StaticResource HeaderGrayBrush}"
+            Padding="20,11"
+            Foreground="{StaticResource TextWhiteBrush}"
+            FontFamily="Roboto"
+            FontSize="22"
+            DockPanel.Dock="Top">
+            Header
+        </TextBlock>
+        <Border
+            BorderBrush="{StaticResource BackgroundGrayBrush}"
+            BorderThickness="1">
+            <TreeView
+                Background="{StaticResource BackgroundDarkGrayBrush}"
+                ItemsSource="{Binding Path=Rounds}">
+                <TreeView.ItemTemplate>
+                    <HierarchicalDataTemplate DataType="m:Round" ItemsSource="{Binding Themes}">
+                        <TextBlock
+                            Text="{Binding Name}"
+                            FontFamily="Roboto"
+                            FontSize="22"
+                            Foreground="{StaticResource TextLightGrayBrush}" />
+                        <HierarchicalDataTemplate.ItemTemplate>
+                            <HierarchicalDataTemplate DataType="m:Theme" ItemsSource="{Binding Questions}">
+                                <TextBlock
+                                    Text="{Binding Name}"
+                                    FontFamily="Roboto"
+                                    FontSize="22"
+                                    Foreground="{StaticResource TextWhiteBrush}" />
+                                <HierarchicalDataTemplate.ItemTemplate>
+                                    <HierarchicalDataTemplate DataType="m:Question">
+                                        <TextBlock
+                                            Text="{Binding Name}"
+                                            FontFamily="Roboto"
+                                            FontSize="22"
+                                            Foreground="{StaticResource TextWhiteBrush}" />
+                                    </HierarchicalDataTemplate>
+                                </HierarchicalDataTemplate.ItemTemplate>
+                            </HierarchicalDataTemplate>
+                        </HierarchicalDataTemplate.ItemTemplate>
+                    </HierarchicalDataTemplate>
+                </TreeView.ItemTemplate>
+            </TreeView>
+        </Border>
+    </DockPanel>
 </UserControl>

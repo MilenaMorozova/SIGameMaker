@@ -3,9 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:SIGameMaker"
         xmlns:vm="clr-namespace:SIGameMaker.ViewModels"
-        xmlns:m="clr-namespace:SIGameMaker.Models"
+        xmlns:c="clr-namespace:SIGameMaker.Views.Components"
         mc:Ignorable="d"
         Title="MainWindow" 
         Height="{x:Static SystemParameters.PrimaryScreenHeight}" 
@@ -15,7 +14,7 @@
         <vm:MainWindowViewModel/>
     </Window.DataContext>
     <DockPanel>
-        
+        <c:RoundsHierarchy/>
         <TextBlock Text="{Binding ExampleText}"/>
     </DockPanel>
 </Window>
